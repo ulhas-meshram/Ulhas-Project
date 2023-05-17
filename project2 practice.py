@@ -86,6 +86,7 @@ df_Data_CSV = spark.read.csv(r"D:\input_data\Data_CSV_FILES\Data_CSV.csv",header
 #     .withColumn("Amount",regexp_replace("Amount","More than 5,000,000","5,000,000 - 9999999999"))\
 #     .withColumn("Amount",regexp_replace("Amount","1,000,000 or Less","0 - 1,000,000"))\
 #     .withColumn("Amount",regexp_replace("Amount","100,000 or Less","0 - 100,000"))\
+#     .withColumn("Symbol",regexp_replace("Symbol","More Than \\$250,000","\\$250,000 - \\$9999999999"))\
 #     .withColumn("Amount",regexp_replace("Amount","50,000 or Less","0 - 50,000"))\
 #     .withColumn("Amount",regexp_replace("Amount","500,000 or Less","0 - 500,000"))\
 #     .withColumn("min",split("Amount","-").getItem(0))\
